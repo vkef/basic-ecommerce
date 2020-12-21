@@ -48,6 +48,9 @@
                                     <label for="exampleInputEmail1" class="form-label">Category Name</label>
                                     <input type="text" name="category_name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
 
+                                    @error('category_name')
+                                    <span class='text-danger'>{{$message}}</span>
+                                    @enderror
 
                                 </div>
                                 <button type="submit" class="btn btn-primary">Add Category</button>
