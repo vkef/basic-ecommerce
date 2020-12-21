@@ -6,6 +6,7 @@ use Illuminate\Support\Carbon;
 use Illuminate\Http\Request;
 use App\Models\Category;
 use Illuminate\support\facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 
 
@@ -38,10 +39,15 @@ class CategoryController extends Controller
         //]);
 
 
-        $category = new Category;
-        $category->category_name = $request->category_name;
-        $category->user_id = Auth::user()->id;
-        $category->save();
+        //$category = new Category;
+        //$category->category_name = $request->category_name;
+        //$category->user_id = Auth::user()->id;
+        //$category->save();
+
+        $data = array();
+        $data['category_name'] = $request->category_name;
+        $data['user_id'] = Auth::user()->id;
+        DB::table('categories')->insert($data);
 
         return Redirect()->back()->with("success", "Category Inserted Successfully");
     }
