@@ -12,6 +12,7 @@ class Category extends Model
     protected $fillable = [
         'user_id',
         'category_name',
+        
 
     ];
 }
