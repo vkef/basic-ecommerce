@@ -36,8 +36,8 @@
                                     <td>{{$category->created_at->diffForHumans()}}</td>
 
                                     <td>
-                                    <a href="{{url('category/edit/' .$category->id)}}" class="btn btn-info">Edit</a>
-                                    <a href="{{url('softdelete/category/' .$category->id)}}" class="btn btn-danger">Delete</a>
+                                    <a href="{{url('category/edit/' .$category->id)}}" class="btn btn-light">Edit</a>
+                                    <a href="{{url('category/remove/' .$category->id)}}" class="btn btn-dark">Remove</a>
                                     </td>
                                 </tr>
                                 @endforeach
@@ -85,18 +85,7 @@
 
 
 
-
-
-
-
-
-
-
-
-
         <!-- Trash Category -->
-
-
 
         <div class="py-12">
 
@@ -128,8 +117,8 @@
                             <td>{{$category->created_at->diffForHumans()}}</td>
 
                             <td>
-                            <a href="{{url('category/edit/' .$category->id)}}" class="btn btn-info">Edit</a>
-                            <a href="" class="btn btn-danger">Delete</a>
+                            <a href="{{url('category/restore/' .$category->id)}}" class="btn btn-info">Restore</a>
+                            <a href="{{url('category/delete/' .$category->id)}}" class="btn btn-danger">Delete</a>
                             </td>
                         </tr>
                         @endforeach

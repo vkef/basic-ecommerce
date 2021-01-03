@@ -70,14 +70,28 @@ class CategoryController extends Controller
             'user_id'=> Auth::user()->id    
             ]);
 
-        return Redirect()->route ('all.category')->with('success','Category Updated Succesfully');
+        return Redirect()->route ('all.category')->with('success','Category Updated Succesfully.');
 
     }
 
-    public function SoftDelete($id){
+    public function Remove($id){
 
         $delete = Category::find($id)->delete();
-        return Redirect()->back()->with('success','Category moved to Trash');
+        return Redirect()->back()->with('success','Category moved to Trash.');
+
+    }
+
+    public function Restore($id){
+
+        $delete = Category::withTrashed()->find($id)->restore();
+        return Redirect()->back()->with('success','Category Restored Succesfully.');
+
+    }
+
+    public function Delete($id){
+
+        $delete = Category::onlyTrashed()->find($id)->forceDelete();
+        return Redirect()->back()->with('success','Category Permanently Deleted.');
 
     }
 }
