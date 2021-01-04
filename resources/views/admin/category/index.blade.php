@@ -13,7 +13,7 @@
                 <div class="col-md-8">
                     <div class="card">
 
-                        <div class="card-header"> All Category </div>
+                        <div class="card-header"> Categories </div>
 
 
                         <table class="table">
