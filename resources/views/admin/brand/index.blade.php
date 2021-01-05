@@ -37,7 +37,7 @@
 
                                     <td>
                                     <a href="{{url('brand/edit/' .$brand->id)}}" class="btn btn-light">Edit</a>
-                                    <a href="{{url('brand/remove/' .$brand->id)}}" class="btn btn-dark">Remove</a>
+                                    <a href="{{url('brand/delete/' .$brand->id)}}" onclick="return confirm ('Are you sure you want to delete this file?')" class="btn btn-danger">Delete</a>
                                     </td>
                                 </tr>
                                 @endforeach
