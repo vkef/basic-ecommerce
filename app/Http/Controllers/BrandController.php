@@ -73,7 +73,11 @@ class BrandController extends Controller
         $old_image = $request->old_image;
 
         $brand_image = $request->file('brand_image');
-        $name_gen = hexdec(uniqid());
+
+        // If statement for name change without changing image
+        if($brand_image){
+
+            $name_gen = hexdec(uniqid());
         $img_ext = strtolower($brand_image->getClientOriginalExtension());
         $img_name = $name_gen.'.'.$img_ext;
         $up_location = 'image/brand/';
@@ -90,9 +94,18 @@ class BrandController extends Controller
 
         return Redirect()->back()->with("success", "Brand Updated Successfully");
 
+        }
+        else{
+
+            Brand::find($id)->update([
+                'brand_name' => $request->brand_name,
+                'created_at' => Carbon::now()
+            ]);
+    
+            return Redirect()->back()->with("success", "Brand Image Name Updated Successfully");
+    
+        }
+
     }
-
-
-
 
 }
