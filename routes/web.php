@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\BrandController;
+use App\Http\Controllers\HomeController;
 use App\Models\User;
 use Illuminate\Support\Facades\DB;
 
@@ -29,7 +30,7 @@ Route::get('/about', function () {
 });
 Route::get('/contact', [ContactController::class, 'index']);
 
-//Categories Controller
+//Categories Route
 Route::get('/category/all', [CategoryController::class, 'AllCat'])->name('all.category');
 Route::post('/category/add', [CategoryController::class, 'AddCat'])->name('store.category');
 Route::get('/category/edit/{id}', [CategoryController::class, 'Edit']);
@@ -38,19 +39,19 @@ Route::get('/category/remove/{id}', [CategoryController::class, 'Remove']);
 Route::get('/category/restore/{id}', [CategoryController::class, 'Restore']);
 Route::get('/category/delete/{id}', [CategoryController::class, 'Delete']);
 
-//Brands Controller
+//Brands Route
 Route::get('/brand/all', [BrandController::class, 'AllBrand'])->name('all.brand');
 Route::post('/brand/store', [BrandController::class, 'StoreBrand'])->name('store.brand');
 Route::get('/brand/edit/{id}', [BrandController::class, 'Edit']);
 Route::post('/brand/update/{id}', [BrandController::class, 'Update']);
 Route::get('/brand/delete/{id}', [BrandController::class, 'Delete']);
 
-//Multi Images Controller
+//Multi Images Route
 Route::get('/multi/image', [BrandController::class, 'Multipic'])->name('multi.image');
 Route::post('/multi/store', [BrandController::class, 'StoreImg'])->name('store.image');
 
-
-
+//Admin Route
+Route::get('/home/slider', [HomeController::class, 'HomeSlider'])->name('home.slider');
 
 
 
