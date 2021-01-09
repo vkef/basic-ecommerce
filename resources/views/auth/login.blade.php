@@ -28,8 +28,8 @@
   
 
   <!-- FAVICON -->
-  <link href="backend/assets/img/favicon.png" rel="shortcut icon" />
-
+  <link href="{{asset('backend/assets/img/favicon.png')}}" rel="shortcut icon" />
+  
   <!--
     HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries
   -->
@@ -49,7 +49,7 @@
           <div class="card">
             <div class="card-header bg-primary">
               <div class="app-brand">
-                <a href="/index.html">
+                
                   <svg class="brand-icon" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid" width="30" height="33"
                     viewBox="0 0 30 33">
                     <g fill="none" fill-rule="evenodd">
@@ -58,7 +58,7 @@
                     </g>
                   </svg>
                   <span class="brand-name">Dashboard Login</span>
-                </a>
+                
               </div>
             </div>
             <div class="card-body p-5">
@@ -97,7 +97,7 @@
       </div>
       <div class="copyright pl-0">
         <p class="text-center">&copy; 2021 Copyright by
-          <a class="text-primary" href="" target="_blank"> YourBrandHere</a>.
+          <a class="text-primary" target="_blank"> YourBrandHere</a>.
         </p>
       </div>
     </div>
