@@ -51,7 +51,12 @@ Route::get('/multi/image', [BrandController::class, 'Multipic'])->name('multi.im
 Route::post('/multi/store', [BrandController::class, 'StoreImg'])->name('store.image');
 
 //Admin Route
-Route::get('/home/slider', [HomeController::class, 'HomeSlider'])->name('home.slider');
+Route::get('/slider/home', [HomeController::class, 'HomeSlider'])->name('home.slider');
+Route::get('/slider/add', [HomeController::class, 'AddSlider'])->name('add.slider');
+Route::post('/slider/home', [HomeController::class, 'StoreSlider'])->name('store.slider');
+Route::get('/slider/edit/{id}', [HomeController::class, 'EditSlider'])->name('edit.slider');
+Route::get('/slider/delete/{id}', [HomeController::class, 'DeleteSlider']);
+Route::post('/slider/update/{id}', [HomeController::class, 'UpdateSlider']);
 
 
 
