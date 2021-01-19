@@ -37,8 +37,6 @@
 
   @include('layouts.body.header')
 
-  @include('layouts.body.slider')
-
   <main id="main"><!-- Start #main -->
 
     @yield('home_content')
