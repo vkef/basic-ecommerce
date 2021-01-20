@@ -108,7 +108,7 @@
                   </li>
                   
                   <li  class="active" >
-                    <a class="sidenav-item-link" href="{{route('all.brand')}}">
+                    <a class="sidenav-item-link" href="{{route('admin.message')}}">
                       <span class="nav-text">Message</span>
                       
                     </a>

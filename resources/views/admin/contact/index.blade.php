@@ -19,7 +19,7 @@
                         
 
                         <div class="card-header d-flex justify-content-between align-items-center"> Contact Page
-                            <a href="{{ route('add.about') }}"> <button class='btn btn-info'>Add Contact</button></a>
+                            <a href="{{ route('add.contact') }}"> <button class='btn btn-info'>Add Contact</button></a>
                         </div>
 
 
@@ -28,10 +28,10 @@
                             <thead>
                                 <tr>
                                     <th scope="col" width="5%">SL No</th>
-                                    <th scope="col" width="15%">Contact Address</th>
+                                    <th scope="col" width="25%">Contact Address</th>
                                     <th scope="col" width="20%">Contact Email</th>
-                                    <th scope="col" width="35%">Contact Phone</th>
-                                    <th scope="col" width="5%">Action</th>
+                                    <th scope="col" width="20%">Contact Phone</th>
+                                    <th scope="col" width="10%">Action</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -45,8 +45,8 @@
                                     <td>{{$con->created_at->diffForHumans()}}</td>
 
                                     <td>
-                                        <a href="{{url('contact/delete/' .$con->id)}}" onclick="return confirm ('Are you sure you want to delete this file?')" style="float:right" class="btn btn-danger">Delete</a>
-                                    <a href="{{url('contact/edit/' .$con->id)}}" style="float:right" class="btn btn-light">Edit</a>
+                                        <a href="{{url('admin/contact/delete/' .$con->id)}}" onclick="return confirm ('Are you sure you want to delete this file?')" style="float:right" class="btn btn-danger">Delete</a>
+                                    <a href="{{url('admin/contact/edit/' .$con->id)}}" style="float:right" class="btn btn-light">Edit</a>
                                     </td>
                                 </tr>
                                 @endforeach
