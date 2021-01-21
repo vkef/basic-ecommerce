@@ -32,8 +32,9 @@
           <li><a href="pricing.html">Pricing</a></li>
           <li><a href="blog.html">Blog</a></li>
           <li><a href="{{route('contact')}}">Contact</a></li>
-
         </ul>
+
+
       </nav><!-- .nav-menu -->
 
       <div class="header-social-links">
@@ -41,7 +42,13 @@
         <a href="#" class="facebook"><i class="icofont-facebook"></i></a>
         <a href="#" class="instagram"><i class="icofont-instagram"></i></a>
         <a href="#" class="linkedin"><i class="icofont-linkedin"></i></i></a>
-      </div>
 
+      </div>
+      <div>
+      <a href="{{route('login')}}">Login</a>
+      /
+      <a href="{{route('register')}}">Register</a>
     </div>
+    </div>
+
   </header><!-- End Header -->
